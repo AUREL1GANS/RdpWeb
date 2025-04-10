@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RellHost - Premium RDP & Hosting</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-server"></i>
+                <span>Host</span>Zone
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Layanan</a></li>
+                    <li><a href="#pricing">Harga</a></li>
+                    <li><a href="#features">Fitur</a></li>
+                    <li><a href="#testimonials">Testimoni</a></li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Daftar</a>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Hosting Kuat untuk <span class="highlight">Proyek Terbaik</span> Anda</h1>
+                <p class="subtitle">Solusi hosting premium dengan performa tinggi untuk RDP, game server, dan bot hosting</p>
+                <div class="hero-buttons">
+                    <a href="#pricing" class="btn btn-primary btn-lg">Lihat Paket</a>
+                    <a href="#features" class="btn btn-outline btn-lg">Pelajari Fitur</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">Uptime</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Pelanggan</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/server-illustration.png" alt="Server Illustration">
+            </div>
+        </section>
+
+        <section id="services" class="section">
+            <div class="section-header">
+                <h2>Layanan Kami</h2>
+                <p class="section-subtitle">Pilih solusi tepat untuk kebutuhan Anda</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>RDP Premium</h3>
+                    <p>Akses remote desktop dengan performa tinggi dan latency rendah</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> SSD NVMe Ultra Cepat</li>
+                        <li><i class="fas fa-check"></i> Processor Dedicated</li>
+                        <li><i class="fas fa-check"></i> Akses 24/7</li>
+                    </ul>
+                    <a href="#rdp-pricing" class="btn btn-outline">Lihat Paket</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Game Hosting</h3>
+                    <p>Hosting server game dengan ping rendah dan DDoS protection</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Support Minecraft, SA-MP, dll</li>
+                        <li><i class="fas fa-check"></i> Auto Backup</li>
+                        <li><i class="fas fa-check"></i> Control Panel Mudah</li>
+                    </ul>
+                    <a href="#game-pricing" class="btn btn-outline">Lihat Paket</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Bot Hosting</h3>
+                    <p>Jalankan bot Discord, Telegram, dan WhatsApp 24/7</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Node.js & Python Support</li>
+                        <li><i class="fas fa-check"></i> Auto Restart</li>
+                        <li><i class="fas fa-check"></i> Monitoring Real-time</li>
+                    </ul>
+                    <a href="#bot-pricing" class="btn btn-outline">Lihat Paket</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="section bg-light">
+            <div class="section-header">
+                <h2>Paket Harga</h2>
+                <p class="section-subtitle">Pilih paket sesuai kebutuhan Anda</p>
+                <div class="pricing-toggle">
+                    <span>Bulanan</span>
+                    <label class="switch">
+                        <input type="checkbox" id="billing-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>Tahunan <small>(Hemat 20%)</small></span>
+                </div>
+            </div>
+            
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="rdp">RDP</button>
+                <button class="tab-btn" data-tab="game">Game Hosting</button>
+                <button class="tab-btn" data-tab="bot">Bot Hosting</button>
+            </div>
+            
+            <div id="rdp-pricing" class="tab-content active">
+                <div class="pricing-grid">
+                    <!-- RDP Basic -->
+                    <div class="pricing-card">
+                        <h3>RDP Basic</h3>
+                        <div class="price">
+                            <span class="currency">Rp</span>75.000
+                            <span class="period">/bulan</span>
+                        </div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> 2 vCPU Cores</li>
+                            <li><i class="fas fa-check"></i> 4GB RAM</li>
+                            <li><i class="fas fa-check"></i> 50GB SSD</li>
+                            <li><i class="fas fa-check"></i> 1Gbps Bandwidth</li>
+                            <li><i class="fas fa-check"></i> Windows 10/11</li>
+                        </ul>
+                        <button class="btn btn-outline add-to-cart" data-product='{"name":"RDP Basic","price":75000,"type":"rdp"}'>
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                    
+                    <!-- RDP Standard (Popular) -->
+                    <div class="pricing-card popular">
+                        <div class="popular-badge">Paling Populer</div>
+                        <h3>RDP Standard</h3>
+                        <div class="price">
+                            <span class="currency">Rp</span>120.000
+                            <span class="period">/bulan</span>
+                        </div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> 4 vCPU Cores</li>
+                            <li><i class="fas fa-check"></i> 8GB RAM</li>
+                            <li><i class="fas fa-check"></i> 100GB SSD</li>
+                            <li><i class="fas fa-check"></i> 1Gbps Bandwidth</li>
+                            <li><i class="fas fa-check"></i> Windows 10/11</li>
+                        </ul>
+                        <button class="btn btn-primary add-to-cart" data-product='{"name":"RDP Standard","price":120000,"type":"rdp"}'>
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                    
+                    <!-- RDP Premium -->
+                    <div class="pricing-card">
+                        <h3>RDP Premium</h3>
+                        <div class="price">
+                            <span class="currency">Rp</span>200.000
+                            <span class="period">/bulan</span>
+                        </div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> 6 vCPU Cores</li>
+                            <li><i class="fas fa-check"></i> 16GB RAM</li>
+                            <li><i class="fas fa-check"></i> 200GB SSD</li>
+                            <li><i class="fas fa-check"></i> 1Gbps Bandwidth</li>
+                            <li><i class="fas fa-check"></i> Windows 10/11</li>
+                        </ul>
+                        <button class="btn btn-outline add-to-cart" data-product='{"name":"RDP Premium","price":200000,"type":"rdp"}'>
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Game Hosting Pricing (hidden by default) -->
+            <div id="game-pricing" class="tab-content">
+                <div class="pricing-grid">
+                    <div class="pricing-card">                       
+                    <h3>Hosting Basic</h3>
+                        <div class="price">
+                            <span class="currency">Rp</span>20.000
+                            <span class="period">/bulan</span>
+                        </div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> 2 vCPU Cores</li>
+                            <li><i class="fas fa-check"></i> 8GB RAM</li>
+                            <li><i class="fas fa-check"></i> 20GB SSD</li>
+                        </ul>
+                        <button class="btn btn-primary add-to-cart" data-product='{"name":"RDP Standard","price":120000,"type":"rdp"}'>
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                        
+                    <div class="pricing-card popular">
+                        <div class="popular-badge">Paling Populer</div>
+                        <h3>Hosting Standard</h3>
+                        <div class="price">
+                            <span class="currency">Rp</span>40.000
+                            <span class="period">/bulan</span>
+                        </div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> 8 vCPU Cores</li>
+                            <li><i class="fas fa-check"></i> 16GB RAM</li>
+                            <li><i class="fas fa-check"></i> 50GB SSD</li>                          
+                        </ul>
+                        <button class="btn btn-primary add-to-cart" data-product='{"name":"RDP Standard","price":120000,"type":"rdp"}'>
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                    
+                    <div class="pricing-card">                       
+                    <h3>Hosting Premium</h3>
+                        <div class="price">
+                            <span class="currency">Rp</span>70.000
+                            <span class="period">/bulan</span>
+                        </div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> Unlimited vCPU Cores</li>
+                            <li><i class="fas fa-check"></i> Unlimited RAM</li>
+                            <li><i class="fas fa-check"></i> Unlimited SSD</li>
+                        </ul>
+                        <button class="btn btn-primary add-to-cart" data-product='{"name":"RDP Standard","price":120000,"type":"rdp"}'>
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                        
+                    <div class="pricing-card">                       
+                    <h3>Hosting Amd Basic</h3>
+                        <div class="price">
+                            <span class="currency">Rp</span>30.000
+                            <span class="period">/bulan</span>
+                        </div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> 2 vCPU Cores</li>
+                            <li><i class="fas fa-check"></i> 8gb RAM</li>
+                            <li><i class="fas fa-check"></i> 20GB SSD</li>
+                            <li><i class="fas fa-check"></i> USE AMD CPU</li>
+                        </ul>
+                        <button class="btn btn-primary add-to-cart" data-product='{"name":"RDP Standard","price":120000,"type":"rdp"}'>
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                    
+                    <div class="pricing-card">                       
+                    <h3>Hosting Amd Standart</h3>
+                        <div class="price">
+                            <span class="currency">Rp</span>60.000
+                            <span class="period">/bulan</span>
+                        </div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> 4 vCPU Cores</li>
+                            <li><i class="fas fa-check"></i> 16gb RAM</li>
+                            <li><i class="fas fa-check"></i> 50GB SSD</li>
+                            <li><i class="fas fa-check"></i> USE AMD CPU</li>
+                        </ul>
+                        <button class="btn btn-primary add-to-cart" data-product='{"name":"RDP Standard","price":120000,"type":"rdp"}'>
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                    
+                    <div class="pricing-card">                       
+                    <h3>Hosting Amd Premium</h3>
+                        <div class="price">
+                            <span class="currency">Rp</span>100.000
+                            <span class="period">/bulan</span>
+                        </div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> UNLIMITED vCPU Cores</li>
+                            <li><i class="fas fa-check"></i> UNLIMITED RAM</li>
+                            <li><i class="fas fa-check"></i> UNLIMITED SSD</li>
+                            <li><i class="fas fa-check"></i> USE AMD CPU</li>
+                        </ul>
+                        <button class="btn btn-primary add-to-cart" data-product='{"name":"RDP Standard","price":120000,"type":"rdp"}'>
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                    <!-- Game packages would go here -->
+                </div>
+            </div>
+                
+            <!-- Bot Hosting Pricing (hidden by default) -->
+            <div id="bot-pricing" class="tab-content">
+                <div class="pricing-grid">
+                    <!-- Bot packages would go here -->
+                </div>
+            </div>
+            
+            <div class="custom-plan">
+                <h3>Butuh Paket Kustom?</h3>
+                <p>Kami bisa menyiapkan solusi khusus untuk kebutuhan spesifik Anda</p>
+                <a href="contact.html" class="btn btn-outline">Hubungi Kami</a>
+            </div>
+        </section>
+
+        <!-- Bagian fitur, testimoni, dan lainnya -->
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
