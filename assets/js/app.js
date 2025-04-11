@@ -181,9 +181,9 @@ document.addEventListener('DOMContentLoaded', function() {
         billingToggle.addEventListener('change', function() {
             const prices = document.querySelectorAll('.price .currency, .price .period');
             const monthlyPrices = {
-                'rdp': [75000, 120000, 200000],
-                'game': [50000, 100000, 180000],
-                'bot': [30000, 60000, 100000]
+                'rdp': [55000, 70000, 250000],
+                'game': [25000, 55000, 100000],
+                'bot': [2000, 10000, 20000]
             };
             
             if (this.checked) {
