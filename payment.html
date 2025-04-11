@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran - HostZone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-server"></i>
+                <span>Host</span>Zone
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Layanan</a></li>
+                    <li><a href="index.html#pricing">Harga</a></li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Daftar</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="checkout-steps">
+        <div class="step completed">
+            <span><i class="fas fa-check"></i></span>
+            <p>Keranjang</p>
+        </div>
+        <div class="step completed">
+            <span><i class="fas fa-check"></i></span>
+            <p>Informasi</p>
+        </div>
+        <div class="step active">
+            <span>3</span>
+            <p>Pembayaran</p>
+        </div>
+        <div class="step">
+            <span>4</span>
+            <p>Selesai</p>
+        </div>
+    </div>
+
+    <main class="payment-container">
+        <section class="payment-instructions">
+            <h2>Instruksi Pembayaran</h2>
+            <div class="payment-method-info">
+                <div class="payment-method-logo">
+                    <img id="payment-logo" src="assets/images/bca.png" alt="Payment Method">
+                </div>
+                <div class="payment-method-details">
+                    <h3 id="payment-method-name">Bank Transfer (BCA)</h3>
+                    <div class="payment-info-item">
+                        <span>Nomor Rekening:</span>
+                        <strong id="account-number">1234567890</strong>
+                    </div>
+                    <div class="payment-info-item">
+                        <span>Atas Nama:</span>
+                        <strong id="account-name">HostZone</strong>
+                    </div>
+                    <div class="payment-info-item">
+                        <span>Total Pembayaran:</span>
+                        <strong id="payment-amount">Rp 200.000</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="payment-steps">
+                <h3>Cara Pembayaran:</h3>
+                <ol>
+                    <li>Buka aplikasi mobile banking atau ATM bank Anda</li>
+                    <li>Pilih menu transfer ke rekening bank</li>
+                    <li>Masukkan nomor rekening tujuan</li>
+                    <li>Masukkan jumlah transfer sesuai total pembayaran</li>
+                    <li>Konfirmasi dan selesaikan transaksi</li>
+                    <li>Simpan bukti transfer</li>
+                </ol>
+            </div>
+            
+            <div class="payment-upload">
+                <h3>Upload Bukti Transfer</h3>
+                <form id="payment-proof-form">
+                    <div class="form-group">
+                        <label for="payment-proof">Pilih File (JPG/PNG, maks. 2MB)</label>
+                        <input type="file" id="payment-proof" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="payment-note">Catatan (Opsional)</label>
+                        <textarea id="payment-note" rows="3" placeholder="Tambahkan catatan jika diperlukan"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Konfirmasi Pembayaran</button>
+                </form>
+            </div>
+        </section>
+        
+        <aside class="order-summary">
+            <h3>Detail Pesanan</h3>
+            <div id="order-details">
+                <!-- Order details will be loaded here -->
+            </div>
+            <div class="summary-item">
+                <span>Subtotal</span>
+                <span id="order-subtotal">Rp 0</span>
+            </div>
+            <div class="summary-item">
+                <span>Diskon</span>
+                <span id="order-discount">Rp 0</span>
+            </div>
+            <div class="summary-item total">
+                <strong>Total</strong>
+                <strong id="order-total">Rp 0</strong>
+            </div>
+            
+            <div class="customer-info">
+                <h4>Informasi Pelanggan</h4>
+                <div class="info-item">
+                    <span>Nama:</span>
+                    <span id="customer-name">-</span>
+                </div>
+                <div class="info-item">
+                    <span>Email:</span>
+                    <span id="customer-email">-</span>
+                </div>
+                <div class="info-item">
+                    <span>Telepon:</span>
+                    <span id="customer-phone">-</span>
+                </div>
+                <div class="info-item">
+                    <span>Domain:</span>
+                    <span id="customer-domain">-</span>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>HostZone</h4>
+                <p>Solusi hosting premium untuk kebutuhan bisnis dan profesional Anda.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="#">RDP Premium</a></li>
+                    <li><a href="#">Game Hosting</a></li>
+                    <li><a href="#">Bot Hosting</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Bantuan</h4>
+                <ul>
+                    <li><a href="#">Pusat Bantuan</a></li>
+                    <li><a href="#">Status Server</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 HostZone. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/payment.js"></script>
+</body>
+</html>

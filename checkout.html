@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - HostZone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-server"></i>
+                <span>Host</span>Zone
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Layanan</a></li>
+                    <li><a href="index.html#pricing">Harga</a></li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Daftar</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="checkout-steps">
+        <div class="step active">
+            <span>1</span>
+            <p>Keranjang</p>
+        </div>
+        <div class="step active">
+            <span>2</span>
+            <p>Informasi</p>
+        </div>
+        <div class="step">
+            <span>3</span>
+            <p>Pembayaran</p>
+        </div>
+        <div class="step">
+            <span>4</span>
+            <p>Selesai</p>
+        </div>
+    </div>
+
+    <main class="checkout-container">
+        <section class="checkout-form">
+            <h2>Informasi Pembelian</h2>
+            <form id="order-form">
+                <div class="form-group">
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" id="name" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Nomor Telepon</label>
+                    <input type="tel" id="phone" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="domain">Domain (jika ada)</label>
+                    <input type="text" id="domain" class="form-control" placeholder="example.com">
+                </div>
+                
+                <div class="form-group">
+                    <label>Metode Pembayaran</label>
+                    <div class="payment-methods">
+                        <div class="payment-method selected">
+                            <img src="assets/images/bca.png" alt="BCA">
+                            <span>Bank Transfer (BCA)</span>
+                        </div>
+                        <div class="payment-method">
+                            <img src="assets/images/mandiri.png" alt="Mandiri">
+                            <span>Bank Transfer (Mandiri)</span>
+                        </div>
+                        <div class="payment-method">
+                            <img src="assets/images/gopay.png" alt="Gopay">
+                            <span>Gopay</span>
+                        </div>
+                        <div class="payment-method">
+                            <img src="assets/images/ovo.png" alt="OVO">
+                            <span>OVO</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">
+                    Lanjutkan Pembayaran
+                </button>
+            </form>
+        </section>
+        
+        <aside class="order-summary">
+            <h3>Ringkasan Pesanan</h3>
+            <div id="order-items">
+                <!-- Items will be loaded from cart -->
+            </div>
+            <div class="summary-item">
+                <span>Subtotal</span>
+                <span id="subtotal">Rp 0</span>
+            </div>
+            <div class="summary-item">
+                <span>Diskon</span>
+                <span id="discount">Rp 0</span>
+            </div>
+            <div class="summary-item total">
+                <strong>Total</strong>
+                <strong id="total">Rp 0</strong>
+            </div>
+            
+            <div class="promo-code">
+                <label for="promo">Kode Promo</label>
+                <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+                    <input type="text" id="promo" class="form-control" placeholder="Masukkan kode">
+                    <button class="btn btn-outline" style="white-space: nowrap;">Gunakan</button>
+                </div>
+            </div>
+            
+            <div class="payment-info">
+                <h4>Metode Pembayaran</h4>
+                <div id="selected-payment">
+                    <img src="assets/images/bca.png" alt="BCA">
+                    <span>Bank Transfer (BCA)</span>
+                </div>
+                <p class="payment-instruction">
+                    Silakan transfer ke rekening BCA 1234567890 a.n. HostZone
+                </p>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>HostZone</h4>
+                <p>Solusi hosting premium untuk kebutuhan bisnis dan profesional Anda.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="#">RDP Premium</a></li>
+                    <li><a href="#">Game Hosting</a></li>
+                    <li><a href="#">Bot Hosting</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Bantuan</h4>
+                <ul>
+                    <li><a href="#">Pusat Bantuan</a></li>
+                    <li><a href="#">Status Server</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 HostZone. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/checkout.js"></script>
+</body>
+</html>

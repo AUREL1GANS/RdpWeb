@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran Berhasil - HostZone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-server"></i>
+                <span>Host</span>Zone
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Layanan</a></li>
+                    <li><a href="index.html#pricing">Harga</a></li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Daftar</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="checkout-steps">
+        <div class="step completed">
+            <span><i class="fas fa-check"></i></span>
+            <p>Keranjang</p>
+        </div>
+        <div class="step completed">
+            <span><i class="fas fa-check"></i></span>
+            <p>Informasi</p>
+        </div>
+        <div class="step completed">
+            <span><i class="fas fa-check"></i></span>
+            <p>Pembayaran</p>
+        </div>
+        <div class="step active">
+            <span>4</span>
+            <p>Selesai</p>
+        </div>
+    </div>
+
+    <main class="payment-success">
+        <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h2>Pembayaran Berhasil!</h2>
+        <p class="success-message">Terima kasih telah melakukan pembelian di HostZone. Pesanan Anda sedang diproses.</p>
+        
+        <div class="order-summary">
+            <div class="summary-item">
+                <span>Nomor Pesanan:</span>
+                <strong>HZ-${Math.floor(Math.random() * 1000000)}</strong>
+            </div>
+            <div class="summary-item">
+                <span>Tanggal:</span>
+                <strong>${new Date().toLocaleDateString('id-ID')}</strong>
+            </div>
+            <div class="summary-item">
+                <span>Total Pembayaran:</span>
+                <strong id="success-total">Rp 0</strong>
+            </div>
+            <div class="summary-item">
+                <span>Metode Pembayaran:</span>
+                <strong id="success-method">-</strong>
+            </div>
+        </div>
+        
+        <div class="next-steps">
+            <h3>Apa Selanjutnya?</h3>
+            <ol>
+                <li>Anda akan menerima email konfirmasi dalam waktu 1 jam</li>
+                <li>Detail akses akan dikirim setelah pembayaran diverifikasi</li>
+                <li>Jika ada pertanyaan, hubungi tim support kami</li>
+            </ol>
+        </div>
+        
+        <div class="success-buttons">
+            <a href="index.html" class="btn btn-outline">Kembali ke Beranda</a>
+            <a href="dashboard.html" class="btn btn-primary">Lihat Pesanan</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>HostZone</h4>
+                <p>Solusi hosting premium untuk kebutuhan bisnis dan profesional Anda.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="#">RDP Premium</a></li>
+                    <li><a href="#">Game Hosting</a></li>
+                    <li><a href="#">Bot Hosting</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Bantuan</h4>
+                <ul>
+                    <li><a href="#">Pusat Bantuan</a></li>
+                    <li><a href="#">Status Server</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 HostZone. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Load order data and display
+        document.addEventListener('DOMContentLoaded', function() {
+            const orderData = JSON.parse(localStorage.getItem('currentOrder'));
+            
+            if (orderData) {
+                document.getElementById('success-total').textContent = 
+                    'Rp ' + orderData.total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+                document.getElementById('success-method').textContent = orderData.paymentMethod;
+            }
+            
+            // Clear payment flag
+            localStorage.removeItem('paymentCompleted');
+        });
+    </script>
+</body>
+</html>
